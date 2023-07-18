@@ -1,0 +1,63 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.dagger.hilt.android'
+}
+
+android {
+    namespace 'com.eita.modulrizedapp'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.eita.modulrizedapp"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildFeatures {
+        viewBinding = true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.0"))
+    implementation(project(":signup"))
+    implementation(project(":login"))
+
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation dependency.material
+    implementation dependency.constraintlayout
+    testImplementation dependency.espresso
+    androidTestImplementation dependency.junit_ext
+    androidTestImplementation dependency.espresso
+
+    implementation(platform(dependency.okHttp_bom))
+    implementation dependency.okHttp
+    implementation dependency.okHttp_logging
+    implementation dependency.lombok
+    annotationProcessor dependency.lombok_processor
+    implementation dependency.hilt
+    annotationProcessor dependency.hilt_processor
+    implementation dependency.timber
+    implementation dependency.rxJava
+    implementation dependency.rxJava_android
+    implementation dependency.retrofit
+    implementation dependency.gson
+    implementation dependency.retrofit_converter
+    implementation dependency.retrofit_rxJava_adapter
+    implementation dependency.lottie
+}
