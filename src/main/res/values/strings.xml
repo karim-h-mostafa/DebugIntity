@@ -1,0 +1,18 @@
+<resources>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign up</string>
+    <string name="let_s_start">let\'s start</string>
+    <string name="welcome_to_our_simple_app">Welcome to our simple app</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="address">Address</string>
+    <string name="name">Name</string>
+    <string name="type">Gender</string>
+    <string name="birthday">Birthday</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="confirm">OK</string>
+    <string name="cancel_">Cancel</string>
+    <string name="email_incorrect">Incorrect Email</string>
+    <string name="empty_field">not allowed to be empty</string>
+</resources>
